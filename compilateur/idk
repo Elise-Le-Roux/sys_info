@@ -1,0 +1,31 @@
+
+void print_mem() {
+	fichier = fopen("debug.txt", "a");
+	printf("  MEM   \n");
+	fwrite("  MEM   \n", 1, strlen("  MEM   \n"), fichier);
+	for(int i=0; i<10 ; i++) {
+		char str1[10];
+		sprintf(str1,"[%d] %d \n", i, mem[i]);
+		printf(str1);
+		fwrite(str1,1, strlen(str1), fichier);
+	}
+	printf("\n");
+	fwrite("\n", 1, strlen("\n"),fichier);
+	fclose(fichier);
+}
+
+void print_pile() {
+	fichier = fopen("debug.txt", "a");
+	printf("  PILE   \n");
+	fwrite("  PILE   \n",1, strlen("  PILE   \n"), fichier);
+	for(int i=0; i<10 ; i++) {
+		char str1[10];
+		sprintf(str1,"[%d] %d \n", i, pile[i]);
+		printf(str1);
+		fwrite(str1,1, strlen(str1), fichier);
+	}
+	printf("\n");
+	fwrite("\n",1, strlen("\n"), fichier);
+	fclose(fichier);
+}
+

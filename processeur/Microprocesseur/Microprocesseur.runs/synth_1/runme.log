@@ -1,0 +1,621 @@
+
+*** Running vivado
+    with args -log Processeur.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Processeur.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Processeur.tcl -notrace
+Command: synth_design -top Processeur -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 65002 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.273 ; gain = 83.828 ; free physical = 56830 ; free virtual = 69211
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Processeur' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:66]
+INFO: [Synth 8-3491] module 'Memoire_instructions' declared at '/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Memoire_instructions.vhd:35' bound to instance 'Mem_Ins' of component 'Memoire_instructions' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'Memoire_instructions' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Memoire_instructions.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Memoire_instructions' (1#1) [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Memoire_instructions.vhd:41]
+INFO: [Synth 8-3491] module 'Banc_de_registres' declared at '/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Banc_de_registres.vhd:35' bound to instance 'Banc' of component 'Banc_de_registres' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'Banc_de_registres' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Banc_de_registres.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'Banc_de_registres' (2#1) [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Banc_de_registres.vhd:47]
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/ALU.vhd:35' bound to instance 'Mon_Alu' of component 'ALU' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'ALU' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/ALU.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (3#1) [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/ALU.vhd:46]
+INFO: [Synth 8-3491] module 'Memoire_donnees' declared at '/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Memoire_donnees.vhd:35' bound to instance 'Mem_Data' of component 'Memoire_donnees' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'Memoire_donnees' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Memoire_donnees.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'Memoire_donnees' (4#1) [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Memoire_donnees.vhd:44]
+INFO: [Synth 8-3491] module 'pipeline1' declared at '/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/pipeline1.vhd:34' bound to instance 'Pipeline_2' of component 'pipeline1' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:184]
+INFO: [Synth 8-638] synthesizing module 'pipeline1' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/pipeline1.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'pipeline1' (5#1) [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/pipeline1.vhd:46]
+INFO: [Synth 8-3491] module 'pipeline2' declared at '/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/pipeline2.vhd:34' bound to instance 'Pipeline_3' of component 'pipeline2' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'pipeline2' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/pipeline2.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'pipeline2' (6#1) [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/pipeline2.vhd:44]
+INFO: [Synth 8-3491] module 'pipeline2' declared at '/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/pipeline2.vhd:34' bound to instance 'Pipeline_4' of component 'pipeline2' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:188]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:248]
+INFO: [Synth 8-256] done synthesizing module 'Processeur' (7#1) [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/Processeur.vhd:66]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.898 ; gain = 128.453 ; free physical = 56839 ; free virtual = 69220
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.898 ; gain = 128.453 ; free physical = 56839 ; free virtual = 69220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.898 ; gain = 128.453 ; free physical = 56839 ; free virtual = 69220
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/constrs_1/new/Processeur.xdc]
+Finished Parsing XDC File [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/constrs_1/new/Processeur.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1658.289 ; gain = 0.000 ; free physical = 56579 ; free virtual = 68965
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56648 ; free virtual = 69042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56648 ; free virtual = 69042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56650 ; free virtual = 69043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "BR_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BR_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "Memory_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Memory_reg[31]" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'Aux_reg' [/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.srcs/sources_1/new/ALU.vhd:70]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56640 ; free virtual = 69034
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	                8 Bit    Registers := 63    
++---Muxes : 
+	 256 Input     28 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 49    
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Processeur 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 8     
+Module Memoire_instructions 
+Detailed RTL Component Info : 
++---Registers : 
+	               28 Bit    Registers := 1     
++---Muxes : 
+	 256 Input     28 Bit        Muxes := 1     
+Module Banc_de_registres 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 16    
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module Memoire_donnees 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 32    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module pipeline1 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 4     
+Module pipeline2 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_Data/Memory_reg[31]" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design Processeur has port OUTINS[31] driven by constant 0
+WARNING: [Synth 8-3917] design Processeur has port OUTINS[30] driven by constant 0
+WARNING: [Synth 8-3917] design Processeur has port OUTINS[29] driven by constant 0
+WARNING: [Synth 8-3917] design Processeur has port OUTINS[28] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[0]' (FD_1) to 'Mem_Ins/OUTPUT_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[1]' (FD_1) to 'Mem_Ins/OUTPUT_reg[18]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[2]' (FD_1) to 'Mem_Ins/OUTPUT_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[3]' (FD_1) to 'Mem_Ins/OUTPUT_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[4]' (FD_1) to 'Mem_Ins/OUTPUT_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[5]' (FD_1) to 'Mem_Ins/OUTPUT_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[6]' (FD_1) to 'Mem_Ins/OUTPUT_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[7]' (FD_1) to 'Mem_Ins/OUTPUT_reg[12]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[9]' (FD_1) to 'Mem_Ins/OUTPUT_reg[24]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[10]' (FD_1) to 'Mem_Ins/OUTPUT_reg[27]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[12]' (FD_1) to 'Mem_Ins/OUTPUT_reg[13]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[13]' (FD_1) to 'Mem_Ins/OUTPUT_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[14]' (FD_1) to 'Mem_Ins/OUTPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[15]' (FD_1) to 'Mem_Ins/OUTPUT_reg[19]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[19]' (FD_1) to 'Mem_Ins/OUTPUT_reg[20]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[20]' (FD_1) to 'Mem_Ins/OUTPUT_reg[21]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[21]' (FD_1) to 'Mem_Ins/OUTPUT_reg[22]'
+INFO: [Synth 8-3886] merging instance 'Mem_Ins/OUTPUT_reg[22]' (FD_1) to 'Mem_Ins/OUTPUT_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Ins/OUTPUT_reg[23] )
+INFO: [Synth 8-3886] merging instance 'OP1_reg[4]' (FD) to 'OP1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'OP1_reg[5]' (FD) to 'OP1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'OP1_reg[6]' (FD) to 'OP1_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\OP1_reg[7] )
+INFO: [Synth 8-3886] merging instance 'OP1_reg[7]' (FD) to 'Pipeline_2/outOP_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outOP_reg[4]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outOP_reg[5]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outOP_reg[6]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outOP_reg[7]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'C1_reg[4]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'C1_reg[5]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'C1_reg[6]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'C1_reg[7]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'B1_reg[4]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'B1_reg[5]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'B1_reg[6]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'B1_reg[7]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'A1_reg[3]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'A1_reg[4]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'A1_reg[5]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'A1_reg[6]' (FD) to 'A1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'A1_reg[7]' (FD) to 'C1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'C1_reg[3]' (FD) to 'C1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'C1_reg[0]' (FD) to 'C1_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\C1_reg[2] )
+INFO: [Synth 8-3886] merging instance 'Pipeline_3/outOP_reg[4]' (FD) to 'Pipeline_3/outOP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'C1_reg[2]' (FD) to 'Pipeline_3/outOP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_3/outOP_reg[5]' (FD) to 'Pipeline_3/outOP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_3/outOP_reg[6]' (FD) to 'Pipeline_3/outOP_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_3/outOP_reg[7]' (FD) to 'Pipeline_2/outA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outA_reg[3]' (FD) to 'Pipeline_2/outA_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outA_reg[4]' (FD) to 'Pipeline_2/outA_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outA_reg[5]' (FD) to 'Pipeline_2/outA_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outA_reg[6]' (FD) to 'Pipeline_2/outA_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Pipeline_2/outA_reg[7] )
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outOP_reg[6]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outOP_reg[5]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outOP_reg[4]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outOP_reg[7]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_3/outA_reg[3]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_2/outA_reg[7]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_3/outA_reg[4]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_3/outA_reg[5]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_3/outA_reg[6]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Pipeline_3/outA_reg[7] )
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outA_reg[3]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outA_reg[4]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outA_reg[5]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outA_reg[6]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Pipeline_4/outA_reg[7]' (FD) to 'Pipeline_3/outA_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Pipeline_3/outA_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[8][7]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[8][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[8][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[8][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[8][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[8][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[8][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[8][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[9][7]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[9][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[9][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[9][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[9][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[9][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[9][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[9][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[10][7]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[10][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[10][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[10][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[10][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[10][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[10][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[10][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[11][7]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[11][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[11][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[11][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[11][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[11][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[11][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[11][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[12][7]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[12][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[12][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[12][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[12][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[12][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[12][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[12][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[13][7]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[13][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[13][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[13][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[13][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[13][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[13][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[13][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[14][7]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[14][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[14][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[14][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[14][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[14][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[14][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[14][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[15][7]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[15][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[15][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[15][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[15][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[15][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[15][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Banc/BR_reg[15][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Mem_Ins/OUTPUT_reg[23]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Pipeline_3/outA_reg[7]) is unused and will be removed from module Processeur.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56429 ; free virtual = 68831
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56520 ; free virtual = 68903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'A1_reg[2]' (FDR) to 'C1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'OP1_reg[0]' (FDR) to 'B1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'OP1_reg[3]' (FDR) to 'B1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[20][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[21][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[22][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[16][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[17][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[18][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[19][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[28][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[29][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[30][0]' (FDRE) to 'Mem_Data/Memory_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[31][0]' (FDRE) to 'Mem_Data/Memory_reg[27][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[24][0]' (FDRE) to 'Mem_Data/Memory_reg[27][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[25][0]' (FDRE) to 'Mem_Data/Memory_reg[27][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[26][0]' (FDRE) to 'Mem_Data/Memory_reg[27][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[27][0]' (FDRE) to 'Mem_Data/Memory_reg[15][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[12][0]' (FDRE) to 'Mem_Data/Memory_reg[15][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[13][0]' (FDRE) to 'Mem_Data/Memory_reg[15][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[14][0]' (FDRE) to 'Mem_Data/Memory_reg[15][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[15][0]' (FDRE) to 'Mem_Data/Memory_reg[11][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[8][0]' (FDRE) to 'Mem_Data/Memory_reg[11][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[9][0]' (FDRE) to 'Mem_Data/Memory_reg[11][0]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[10][0]' (FDRE) to 'Mem_Data/Memory_reg[11][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Data/Memory_reg[11][0] )
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[20][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[21][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[22][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[16][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[17][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[18][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[19][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[28][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[29][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[30][1]' (FDRE) to 'Mem_Data/Memory_reg[31][1]'
+INFO: [Synth 8-3886] merging instance 'Mem_Data/Memory_reg[31][1]' (FDRE) to 'Mem_Data/Memory_reg[27][1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Data/Memory_reg[11][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Data/Memory_reg[11][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Data/Memory_reg[11][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Data/Memory_reg[11][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Data/Memory_reg[11][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Data/Memory_reg[11][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Mem_Data/Memory_reg[11][7] )
+WARNING: [Synth 8-3332] Sequential element (Mem_Data/Memory_reg[11][0]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Mem_Data/Memory_reg[11][1]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Mem_Data/Memory_reg[11][2]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Mem_Data/Memory_reg[11][3]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Mem_Data/Memory_reg[11][4]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Mem_Data/Memory_reg[11][5]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Mem_Data/Memory_reg[11][6]) is unused and will be removed from module Processeur.
+WARNING: [Synth 8-3332] Sequential element (Mem_Data/Memory_reg[11][7]) is unused and will be removed from module Processeur.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68897
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68898
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    18|
+|3     |LUT1   |     2|
+|4     |LUT2   |    45|
+|5     |LUT3   |     7|
+|6     |LUT4   |    69|
+|7     |LUT5   |    48|
+|8     |LUT6   |   129|
+|9     |MUXF7  |     8|
+|10    |FDRE   |   215|
+|11    |LD     |    16|
+|12    |IBUF   |     2|
+|13    |OBUF   |   182|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------+---------------------+------+
+|      |Instance     |Module               |Cells |
++------+-------------+---------------------+------+
+|1     |top          |                     |   742|
+|2     |  Banc       |Banc_de_registres    |   104|
+|3     |  Mem_Data   |Memoire_donnees      |    97|
+|4     |  Mem_Ins    |Memoire_instructions |    34|
+|5     |  Mon_Alu    |ALU                  |    40|
+|6     |  Pipeline_2 |pipeline1            |   174|
+|7     |  Pipeline_3 |pipeline2            |    54|
+|8     |  Pipeline_4 |pipeline2_0          |    27|
++------+-------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56514 ; free virtual = 68898
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 79 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1658.289 ; gain = 128.453 ; free physical = 56570 ; free virtual = 68953
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1658.289 ; gain = 486.844 ; free physical = 56579 ; free virtual = 68963
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  LD => LDCE: 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+227 Infos, 80 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1658.289 ; gain = 498.469 ; free physical = 56567 ; free virtual = 68951
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/lerouxde/4IR/S8/sys_info/processeur/Microprocesseur/Microprocesseur.runs/synth_1/Processeur.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Processeur_utilization_synth.rpt -pb Processeur_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1682.301 ; gain = 0.000 ; free physical = 56566 ; free virtual = 68950
+INFO: [Common 17-206] Exiting Vivado at Mon May 30 17:28:41 2022...

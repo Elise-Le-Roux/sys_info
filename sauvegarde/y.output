@@ -1,0 +1,1028 @@
+Terminaux inutilisés dans la grammaire
+
+    tCOM
+
+
+Grammaire
+
+    0 $accept: FichierC $end
+
+    1 FichierC: Main
+
+    2 Main: tINT tMAIN tPO tPF tAO Body tRETURN tID tPV tAF
+
+    3 Body: Declarations Instructions
+
+    4 Declarations: %empty
+    5             | Var VarNext tPV Declarations
+
+    6 Type: tINT
+    7     | tCONST
+
+    8 VarNext: %empty
+    9        | tV Var VarNext
+
+   10 Var: Type tID
+   11    | Type tID tEGAL Expr
+
+   12 Expr: Expr tADD DivMul
+   13     | Expr tSOU DivMul
+   14     | DivMul
+
+   15 DivMul: DivMul tMUL Terme
+   16       | DivMul tDIV Terme
+   17       | Terme
+
+   18 Terme: tPO Expr tPF
+   19      | tID
+   20      | tNB
+
+   21 Instructions: %empty
+   22             | Affectation Instructions
+   23             | AppelFonc Instructions
+   24             | If Instructions
+   25             | While Instructions
+
+   26 Affectation: tID tEGAL Expr tPV
+
+   27 $@1: %empty
+
+   28 AppelFonc: tPRINT tPO tID $@1 tPF tPV
+
+   29 Condition: Terme tINF Terme
+   30          | Terme tSUP Terme
+   31          | Terme tEGALEGAL Terme
+
+   32 $@2: %empty
+
+   33 $@3: %empty
+
+   34 If: tIF tPO Condition tPF $@2 tAO Instructions $@3 tAF Else
+
+   35 Else: %empty
+   36     | tELSE tAO Instructions tAF
+
+   37 $@4: %empty
+
+   38 While: tWHILE tPO Condition tPF $@4 tAO Instructions tAF
+
+
+Terminaux, suivis des règles où ils apparaissent
+
+    $end (0) 0
+    error (256)
+    tINT (258) 2 6
+    tPRINT (259) 28
+    tRETURN (260) 2
+    tMAIN (261) 2
+    tCONST (262) 7
+    tPO (263) 2 18 28 34 38
+    tPF (264) 2 18 28 34 38
+    tAO (265) 2 34 36 38
+    tPV (266) 2 5 26 28
+    tV (267) 9
+    tCOM (268)
+    tAF (269) 2 34 36 38
+    tELSE (270) 36
+    tEGAL (271) 11 26
+    tSOU (272) 13
+    tADD (273) 12
+    tMUL (274) 15
+    tDIV (275) 16
+    tSUP (276) 30
+    tINF (277) 29
+    tEGALEGAL (278) 31
+    tNB <nb> (279) 20
+    tID <var> (280) 2 10 11 19 26 28
+    tIF <nb> (281) 34
+    tWHILE <nb> (282) 38
+
+
+Non-terminaux, suivis des règles où ils apparaissent
+
+    $accept (28)
+        à gauche: 0
+    FichierC (29)
+        à gauche: 1
+        à droite: 0
+    Main (30)
+        à gauche: 2
+        à droite: 1
+    Body (31)
+        à gauche: 3
+        à droite: 2
+    Declarations (32)
+        à gauche: 4 5
+        à droite: 3 5
+    Type (33)
+        à gauche: 6 7
+        à droite: 10 11
+    VarNext (34)
+        à gauche: 8 9
+        à droite: 5 9
+    Var (35)
+        à gauche: 10 11
+        à droite: 5 9
+    Expr <nb> (36)
+        à gauche: 12 13 14
+        à droite: 11 12 13 18 26
+    DivMul <nb> (37)
+        à gauche: 15 16 17
+        à droite: 12 13 14 15 16
+    Terme <nb> (38)
+        à gauche: 18 19 20
+        à droite: 15 16 17 29 30 31
+    Instructions (39)
+        à gauche: 21 22 23 24 25
+        à droite: 3 22 23 24 25 34 36 38
+    Affectation (40)
+        à gauche: 26
+        à droite: 22
+    AppelFonc (41)
+        à gauche: 28
+        à droite: 23
+    $@1 (42)
+        à gauche: 27
+        à droite: 28
+    Condition (43)
+        à gauche: 29 30 31
+        à droite: 34 38
+    If (44)
+        à gauche: 34
+        à droite: 24
+    $@2 (45)
+        à gauche: 32
+        à droite: 34
+    $@3 (46)
+        à gauche: 33
+        à droite: 34
+    Else <nb> (47)
+        à gauche: 35 36
+        à droite: 34
+    While (48)
+        à gauche: 38
+        à droite: 25
+    $@4 (49)
+        à gauche: 37
+        à droite: 38
+
+
+État 0
+
+    0 $accept: . FichierC $end
+
+    tINT  décalage et aller à l'état 1
+
+    FichierC  aller à l'état 2
+    Main      aller à l'état 3
+
+
+État 1
+
+    2 Main: tINT . tMAIN tPO tPF tAO Body tRETURN tID tPV tAF
+
+    tMAIN  décalage et aller à l'état 4
+
+
+État 2
+
+    0 $accept: FichierC . $end
+
+    $end  décalage et aller à l'état 5
+
+
+État 3
+
+    1 FichierC: Main .
+
+    $défaut  réduction par utilisation de la règle 1 (FichierC)
+
+
+État 4
+
+    2 Main: tINT tMAIN . tPO tPF tAO Body tRETURN tID tPV tAF
+
+    tPO  décalage et aller à l'état 6
+
+
+État 5
+
+    0 $accept: FichierC $end .
+
+    $défaut  accepter
+
+
+État 6
+
+    2 Main: tINT tMAIN tPO . tPF tAO Body tRETURN tID tPV tAF
+
+    tPF  décalage et aller à l'état 7
+
+
+État 7
+
+    2 Main: tINT tMAIN tPO tPF . tAO Body tRETURN tID tPV tAF
+
+    tAO  décalage et aller à l'état 8
+
+
+État 8
+
+    2 Main: tINT tMAIN tPO tPF tAO . Body tRETURN tID tPV tAF
+
+    tINT    décalage et aller à l'état 9
+    tCONST  décalage et aller à l'état 10
+
+    $défaut  réduction par utilisation de la règle 4 (Declarations)
+
+    Body          aller à l'état 11
+    Declarations  aller à l'état 12
+    Type          aller à l'état 13
+    Var           aller à l'état 14
+
+
+État 9
+
+    6 Type: tINT .
+
+    $défaut  réduction par utilisation de la règle 6 (Type)
+
+
+État 10
+
+    7 Type: tCONST .
+
+    $défaut  réduction par utilisation de la règle 7 (Type)
+
+
+État 11
+
+    2 Main: tINT tMAIN tPO tPF tAO Body . tRETURN tID tPV tAF
+
+    tRETURN  décalage et aller à l'état 15
+
+
+État 12
+
+    3 Body: Declarations . Instructions
+
+    tPRINT  décalage et aller à l'état 16
+    tID     décalage et aller à l'état 17
+    tIF     décalage et aller à l'état 18
+    tWHILE  décalage et aller à l'état 19
+
+    $défaut  réduction par utilisation de la règle 21 (Instructions)
+
+    Instructions  aller à l'état 20
+    Affectation   aller à l'état 21
+    AppelFonc     aller à l'état 22
+    If            aller à l'état 23
+    While         aller à l'état 24
+
+
+État 13
+
+   10 Var: Type . tID
+   11    | Type . tID tEGAL Expr
+
+    tID  décalage et aller à l'état 25
+
+
+État 14
+
+    5 Declarations: Var . VarNext tPV Declarations
+
+    tV  décalage et aller à l'état 26
+
+    $défaut  réduction par utilisation de la règle 8 (VarNext)
+
+    VarNext  aller à l'état 27
+
+
+État 15
+
+    2 Main: tINT tMAIN tPO tPF tAO Body tRETURN . tID tPV tAF
+
+    tID  décalage et aller à l'état 28
+
+
+État 16
+
+   28 AppelFonc: tPRINT . tPO tID $@1 tPF tPV
+
+    tPO  décalage et aller à l'état 29
+
+
+État 17
+
+   26 Affectation: tID . tEGAL Expr tPV
+
+    tEGAL  décalage et aller à l'état 30
+
+
+État 18
+
+   34 If: tIF . tPO Condition tPF $@2 tAO Instructions $@3 tAF Else
+
+    tPO  décalage et aller à l'état 31
+
+
+État 19
+
+   38 While: tWHILE . tPO Condition tPF $@4 tAO Instructions tAF
+
+    tPO  décalage et aller à l'état 32
+
+
+État 20
+
+    3 Body: Declarations Instructions .
+
+    $défaut  réduction par utilisation de la règle 3 (Body)
+
+
+État 21
+
+   22 Instructions: Affectation . Instructions
+
+    tPRINT  décalage et aller à l'état 16
+    tID     décalage et aller à l'état 17
+    tIF     décalage et aller à l'état 18
+    tWHILE  décalage et aller à l'état 19
+
+    $défaut  réduction par utilisation de la règle 21 (Instructions)
+
+    Instructions  aller à l'état 33
+    Affectation   aller à l'état 21
+    AppelFonc     aller à l'état 22
+    If            aller à l'état 23
+    While         aller à l'état 24
+
+
+État 22
+
+   23 Instructions: AppelFonc . Instructions
+
+    tPRINT  décalage et aller à l'état 16
+    tID     décalage et aller à l'état 17
+    tIF     décalage et aller à l'état 18
+    tWHILE  décalage et aller à l'état 19
+
+    $défaut  réduction par utilisation de la règle 21 (Instructions)
+
+    Instructions  aller à l'état 34
+    Affectation   aller à l'état 21
+    AppelFonc     aller à l'état 22
+    If            aller à l'état 23
+    While         aller à l'état 24
+
+
+État 23
+
+   24 Instructions: If . Instructions
+
+    tPRINT  décalage et aller à l'état 16
+    tID     décalage et aller à l'état 17
+    tIF     décalage et aller à l'état 18
+    tWHILE  décalage et aller à l'état 19
+
+    $défaut  réduction par utilisation de la règle 21 (Instructions)
+
+    Instructions  aller à l'état 35
+    Affectation   aller à l'état 21
+    AppelFonc     aller à l'état 22
+    If            aller à l'état 23
+    While         aller à l'état 24
+
+
+État 24
+
+   25 Instructions: While . Instructions
+
+    tPRINT  décalage et aller à l'état 16
+    tID     décalage et aller à l'état 17
+    tIF     décalage et aller à l'état 18
+    tWHILE  décalage et aller à l'état 19
+
+    $défaut  réduction par utilisation de la règle 21 (Instructions)
+
+    Instructions  aller à l'état 36
+    Affectation   aller à l'état 21
+    AppelFonc     aller à l'état 22
+    If            aller à l'état 23
+    While         aller à l'état 24
+
+
+État 25
+
+   10 Var: Type tID .
+   11    | Type tID . tEGAL Expr
+
+    tEGAL  décalage et aller à l'état 37
+
+    $défaut  réduction par utilisation de la règle 10 (Var)
+
+
+État 26
+
+    9 VarNext: tV . Var VarNext
+
+    tINT    décalage et aller à l'état 9
+    tCONST  décalage et aller à l'état 10
+
+    Type  aller à l'état 13
+    Var   aller à l'état 38
+
+
+État 27
+
+    5 Declarations: Var VarNext . tPV Declarations
+
+    tPV  décalage et aller à l'état 39
+
+
+État 28
+
+    2 Main: tINT tMAIN tPO tPF tAO Body tRETURN tID . tPV tAF
+
+    tPV  décalage et aller à l'état 40
+
+
+État 29
+
+   28 AppelFonc: tPRINT tPO . tID $@1 tPF tPV
+
+    tID  décalage et aller à l'état 41
+
+
+État 30
+
+   26 Affectation: tID tEGAL . Expr tPV
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Expr    aller à l'état 45
+    DivMul  aller à l'état 46
+    Terme   aller à l'état 47
+
+
+État 31
+
+   34 If: tIF tPO . Condition tPF $@2 tAO Instructions $@3 tAF Else
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Terme      aller à l'état 48
+    Condition  aller à l'état 49
+
+
+État 32
+
+   38 While: tWHILE tPO . Condition tPF $@4 tAO Instructions tAF
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Terme      aller à l'état 48
+    Condition  aller à l'état 50
+
+
+État 33
+
+   22 Instructions: Affectation Instructions .
+
+    $défaut  réduction par utilisation de la règle 22 (Instructions)
+
+
+État 34
+
+   23 Instructions: AppelFonc Instructions .
+
+    $défaut  réduction par utilisation de la règle 23 (Instructions)
+
+
+État 35
+
+   24 Instructions: If Instructions .
+
+    $défaut  réduction par utilisation de la règle 24 (Instructions)
+
+
+État 36
+
+   25 Instructions: While Instructions .
+
+    $défaut  réduction par utilisation de la règle 25 (Instructions)
+
+
+État 37
+
+   11 Var: Type tID tEGAL . Expr
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Expr    aller à l'état 51
+    DivMul  aller à l'état 46
+    Terme   aller à l'état 47
+
+
+État 38
+
+    9 VarNext: tV Var . VarNext
+
+    tV  décalage et aller à l'état 26
+
+    $défaut  réduction par utilisation de la règle 8 (VarNext)
+
+    VarNext  aller à l'état 52
+
+
+État 39
+
+    5 Declarations: Var VarNext tPV . Declarations
+
+    tINT    décalage et aller à l'état 9
+    tCONST  décalage et aller à l'état 10
+
+    $défaut  réduction par utilisation de la règle 4 (Declarations)
+
+    Declarations  aller à l'état 53
+    Type          aller à l'état 13
+    Var           aller à l'état 14
+
+
+État 40
+
+    2 Main: tINT tMAIN tPO tPF tAO Body tRETURN tID tPV . tAF
+
+    tAF  décalage et aller à l'état 54
+
+
+État 41
+
+   28 AppelFonc: tPRINT tPO tID . $@1 tPF tPV
+
+    $défaut  réduction par utilisation de la règle 27 ($@1)
+
+    $@1  aller à l'état 55
+
+
+État 42
+
+   18 Terme: tPO . Expr tPF
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Expr    aller à l'état 56
+    DivMul  aller à l'état 46
+    Terme   aller à l'état 47
+
+
+État 43
+
+   20 Terme: tNB .
+
+    $défaut  réduction par utilisation de la règle 20 (Terme)
+
+
+État 44
+
+   19 Terme: tID .
+
+    $défaut  réduction par utilisation de la règle 19 (Terme)
+
+
+État 45
+
+   12 Expr: Expr . tADD DivMul
+   13     | Expr . tSOU DivMul
+   26 Affectation: tID tEGAL Expr . tPV
+
+    tPV   décalage et aller à l'état 57
+    tSOU  décalage et aller à l'état 58
+    tADD  décalage et aller à l'état 59
+
+
+État 46
+
+   14 Expr: DivMul .
+   15 DivMul: DivMul . tMUL Terme
+   16       | DivMul . tDIV Terme
+
+    tMUL  décalage et aller à l'état 60
+    tDIV  décalage et aller à l'état 61
+
+    $défaut  réduction par utilisation de la règle 14 (Expr)
+
+
+État 47
+
+   17 DivMul: Terme .
+
+    $défaut  réduction par utilisation de la règle 17 (DivMul)
+
+
+État 48
+
+   29 Condition: Terme . tINF Terme
+   30          | Terme . tSUP Terme
+   31          | Terme . tEGALEGAL Terme
+
+    tSUP       décalage et aller à l'état 62
+    tINF       décalage et aller à l'état 63
+    tEGALEGAL  décalage et aller à l'état 64
+
+
+État 49
+
+   34 If: tIF tPO Condition . tPF $@2 tAO Instructions $@3 tAF Else
+
+    tPF  décalage et aller à l'état 65
+
+
+État 50
+
+   38 While: tWHILE tPO Condition . tPF $@4 tAO Instructions tAF
+
+    tPF  décalage et aller à l'état 66
+
+
+État 51
+
+   11 Var: Type tID tEGAL Expr .
+   12 Expr: Expr . tADD DivMul
+   13     | Expr . tSOU DivMul
+
+    tSOU  décalage et aller à l'état 58
+    tADD  décalage et aller à l'état 59
+
+    $défaut  réduction par utilisation de la règle 11 (Var)
+
+
+État 52
+
+    9 VarNext: tV Var VarNext .
+
+    $défaut  réduction par utilisation de la règle 9 (VarNext)
+
+
+État 53
+
+    5 Declarations: Var VarNext tPV Declarations .
+
+    $défaut  réduction par utilisation de la règle 5 (Declarations)
+
+
+État 54
+
+    2 Main: tINT tMAIN tPO tPF tAO Body tRETURN tID tPV tAF .
+
+    $défaut  réduction par utilisation de la règle 2 (Main)
+
+
+État 55
+
+   28 AppelFonc: tPRINT tPO tID $@1 . tPF tPV
+
+    tPF  décalage et aller à l'état 67
+
+
+État 56
+
+   12 Expr: Expr . tADD DivMul
+   13     | Expr . tSOU DivMul
+   18 Terme: tPO Expr . tPF
+
+    tPF   décalage et aller à l'état 68
+    tSOU  décalage et aller à l'état 58
+    tADD  décalage et aller à l'état 59
+
+
+État 57
+
+   26 Affectation: tID tEGAL Expr tPV .
+
+    $défaut  réduction par utilisation de la règle 26 (Affectation)
+
+
+État 58
+
+   13 Expr: Expr tSOU . DivMul
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    DivMul  aller à l'état 69
+    Terme   aller à l'état 47
+
+
+État 59
+
+   12 Expr: Expr tADD . DivMul
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    DivMul  aller à l'état 70
+    Terme   aller à l'état 47
+
+
+État 60
+
+   15 DivMul: DivMul tMUL . Terme
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Terme  aller à l'état 71
+
+
+État 61
+
+   16 DivMul: DivMul tDIV . Terme
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Terme  aller à l'état 72
+
+
+État 62
+
+   30 Condition: Terme tSUP . Terme
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Terme  aller à l'état 73
+
+
+État 63
+
+   29 Condition: Terme tINF . Terme
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Terme  aller à l'état 74
+
+
+État 64
+
+   31 Condition: Terme tEGALEGAL . Terme
+
+    tPO  décalage et aller à l'état 42
+    tNB  décalage et aller à l'état 43
+    tID  décalage et aller à l'état 44
+
+    Terme  aller à l'état 75
+
+
+État 65
+
+   34 If: tIF tPO Condition tPF . $@2 tAO Instructions $@3 tAF Else
+
+    $défaut  réduction par utilisation de la règle 32 ($@2)
+
+    $@2  aller à l'état 76
+
+
+État 66
+
+   38 While: tWHILE tPO Condition tPF . $@4 tAO Instructions tAF
+
+    $défaut  réduction par utilisation de la règle 37 ($@4)
+
+    $@4  aller à l'état 77
+
+
+État 67
+
+   28 AppelFonc: tPRINT tPO tID $@1 tPF . tPV
+
+    tPV  décalage et aller à l'état 78
+
+
+État 68
+
+   18 Terme: tPO Expr tPF .
+
+    $défaut  réduction par utilisation de la règle 18 (Terme)
+
+
+État 69
+
+   13 Expr: Expr tSOU DivMul .
+   15 DivMul: DivMul . tMUL Terme
+   16       | DivMul . tDIV Terme
+
+    tMUL  décalage et aller à l'état 60
+    tDIV  décalage et aller à l'état 61
+
+    $défaut  réduction par utilisation de la règle 13 (Expr)
+
+
+État 70
+
+   12 Expr: Expr tADD DivMul .
+   15 DivMul: DivMul . tMUL Terme
+   16       | DivMul . tDIV Terme
+
+    tMUL  décalage et aller à l'état 60
+    tDIV  décalage et aller à l'état 61
+
+    $défaut  réduction par utilisation de la règle 12 (Expr)
+
+
+État 71
+
+   15 DivMul: DivMul tMUL Terme .
+
+    $défaut  réduction par utilisation de la règle 15 (DivMul)
+
+
+État 72
+
+   16 DivMul: DivMul tDIV Terme .
+
+    $défaut  réduction par utilisation de la règle 16 (DivMul)
+
+
+État 73
+
+   30 Condition: Terme tSUP Terme .
+
+    $défaut  réduction par utilisation de la règle 30 (Condition)
+
+
+État 74
+
+   29 Condition: Terme tINF Terme .
+
+    $défaut  réduction par utilisation de la règle 29 (Condition)
+
+
+État 75
+
+   31 Condition: Terme tEGALEGAL Terme .
+
+    $défaut  réduction par utilisation de la règle 31 (Condition)
+
+
+État 76
+
+   34 If: tIF tPO Condition tPF $@2 . tAO Instructions $@3 tAF Else
+
+    tAO  décalage et aller à l'état 79
+
+
+État 77
+
+   38 While: tWHILE tPO Condition tPF $@4 . tAO Instructions tAF
+
+    tAO  décalage et aller à l'état 80
+
+
+État 78
+
+   28 AppelFonc: tPRINT tPO tID $@1 tPF tPV .
+
+    $défaut  réduction par utilisation de la règle 28 (AppelFonc)
+
+
+État 79
+
+   34 If: tIF tPO Condition tPF $@2 tAO . Instructions $@3 tAF Else
+
+    tPRINT  décalage et aller à l'état 16
+    tID     décalage et aller à l'état 17
+    tIF     décalage et aller à l'état 18
+    tWHILE  décalage et aller à l'état 19
+
+    $défaut  réduction par utilisation de la règle 21 (Instructions)
+
+    Instructions  aller à l'état 81
+    Affectation   aller à l'état 21
+    AppelFonc     aller à l'état 22
+    If            aller à l'état 23
+    While         aller à l'état 24
+
+
+État 80
+
+   38 While: tWHILE tPO Condition tPF $@4 tAO . Instructions tAF
+
+    tPRINT  décalage et aller à l'état 16
+    tID     décalage et aller à l'état 17
+    tIF     décalage et aller à l'état 18
+    tWHILE  décalage et aller à l'état 19
+
+    $défaut  réduction par utilisation de la règle 21 (Instructions)
+
+    Instructions  aller à l'état 82
+    Affectation   aller à l'état 21
+    AppelFonc     aller à l'état 22
+    If            aller à l'état 23
+    While         aller à l'état 24
+
+
+État 81
+
+   34 If: tIF tPO Condition tPF $@2 tAO Instructions . $@3 tAF Else
+
+    $défaut  réduction par utilisation de la règle 33 ($@3)
+
+    $@3  aller à l'état 83
+
+
+État 82
+
+   38 While: tWHILE tPO Condition tPF $@4 tAO Instructions . tAF
+
+    tAF  décalage et aller à l'état 84
+
+
+État 83
+
+   34 If: tIF tPO Condition tPF $@2 tAO Instructions $@3 . tAF Else
+
+    tAF  décalage et aller à l'état 85
+
+
+État 84
+
+   38 While: tWHILE tPO Condition tPF $@4 tAO Instructions tAF .
+
+    $défaut  réduction par utilisation de la règle 38 (While)
+
+
+État 85
+
+   34 If: tIF tPO Condition tPF $@2 tAO Instructions $@3 tAF . Else
+
+    tELSE  décalage et aller à l'état 86
+
+    $défaut  réduction par utilisation de la règle 35 (Else)
+
+    Else  aller à l'état 87
+
+
+État 86
+
+   36 Else: tELSE . tAO Instructions tAF
+
+    tAO  décalage et aller à l'état 88
+
+
+État 87
+
+   34 If: tIF tPO Condition tPF $@2 tAO Instructions $@3 tAF Else .
+
+    $défaut  réduction par utilisation de la règle 34 (If)
+
+
+État 88
+
+   36 Else: tELSE tAO . Instructions tAF
+
+    tPRINT  décalage et aller à l'état 16
+    tID     décalage et aller à l'état 17
+    tIF     décalage et aller à l'état 18
+    tWHILE  décalage et aller à l'état 19
+
+    $défaut  réduction par utilisation de la règle 21 (Instructions)
+
+    Instructions  aller à l'état 89
+    Affectation   aller à l'état 21
+    AppelFonc     aller à l'état 22
+    If            aller à l'état 23
+    While         aller à l'état 24
+
+
+État 89
+
+   36 Else: tELSE tAO Instructions . tAF
+
+    tAF  décalage et aller à l'état 90
+
+
+État 90
+
+   36 Else: tELSE tAO Instructions tAF .
+
+    $défaut  réduction par utilisation de la règle 36 (Else)
